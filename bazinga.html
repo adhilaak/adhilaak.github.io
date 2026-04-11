@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>bazinga</title>
+
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      background-image: url("cloudsbg.gif");
+      background-size: cover;
+      background-position: center;
+    }
+
+    .overlay-image {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 800px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Image on top -->
+  <img src="bazing.gif" class="overlay-image">
+
+  <!-- Sound -->
+  <audio id="openSound" src="bazinga2.ogg" loop></audio>
+
+  <script>
+    window.onload = function() {
+      document.getElementById("openSound").play();
+    };
+  </script>
+
+</body>
+</html>

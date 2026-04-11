@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Popup Image</title>
+
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      background: #111;
+      color: white;
+    }
+
+    /* hidden popup */
+    #popup {
+      display: none;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 1000;
+    }
+
+    #popup img {
+      width: 400px;
+    }
+  </style>
+</head>
+
+<body>
+
+<li><a href="#" onclick="showPopup(event)">Edit</a></li>
+
+<!-- popup image -->
+<div id="popup">
+  <img src="help.png">
+</div>
+
+<!-- sound -->
+<audio id="sound" src="zen.ogg" loop></audio>
+
+<script>
+function showPopup(e) {
+  e.preventDefault();
+
+  // show image
+  document.getElementById("popup").style.display = "block";
+
+  // play sound
+  document.getElementById("sound").play();
+}
+</script>
+
+</body>
+</html>
